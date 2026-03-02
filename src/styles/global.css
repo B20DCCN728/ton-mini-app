@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Sora:wght@300;400;600;700;800&display=swap');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body { background: #080c14; }
+
+@keyframes spin    { to { transform: rotate(360deg); } }
+@keyframes loadbar { 0%{transform:scaleX(0) translateX(0)} 50%{transform:scaleX(0.6) translateX(40%)} 100%{transform:scaleX(0) translateX(200%)} }
+@keyframes pulse   { 0%,100%{opacity:0.4} 50%{opacity:0.8} }
+@keyframes fadeUp  { from{opacity:0;transform:translateY(16px)} to{opacity:1;transform:translateY(0)} }
+@keyframes float   { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-6px)} }
+
+.action-btn:not(:disabled):hover  { transform: scale(1.02) !important; border-color: rgba(255,255,255,0.15) !important; background: rgba(255,255,255,0.06) !important; }
+.action-btn:not(:disabled):active { transform: scale(0.97) !important; }
+
+.tab-btn { background: none; border: none; cursor: pointer; padding: 8px 16px; border-radius: 20px; font-family: 'Space Mono', monospace; font-size: 12px; letter-spacing: 0.06em; transition: all 0.2s; color: #444; text-transform: uppercase; }
+.tab-btn.active { background: rgba(124,131,253,0.15); color: #7c83fd; }
+.tab-btn:hover:not(.active) { color: #888; }
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #222; border-radius: 2px; }
